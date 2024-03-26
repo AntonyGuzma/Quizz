@@ -195,6 +195,24 @@ function showSucessMsg(){
     totalQuestions.textContent = questions.length
 }
 
+//Reiniciar Quizz
+
+const restartBtn = document.querySelector('#restart')
+
+restartBtn.addEventListener("click", () => {
+
+  //zerando os dados
+  actualQuestion = 0
+  points = 0
+
+  //o toggle adiciona se nao tiver e remove se tive
+  quizzContainer.classList.toggle('hide')
+  scoreContainer.classList.toggle('hide')
+
+  //reiniciando o jogo
+  init()
+})
+
 
 //inicialização do QUizz
 init()
